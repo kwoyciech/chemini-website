@@ -1,7 +1,8 @@
 /* Custom styles based on the analysis report */
 body {
     font-family: 'Inter', sans-serif;
-    background-image: url('https://i.ibb.co/rR0XcL61/background.png');
+    /* Sourcing locally from assets/images folder */
+    background-image: url('../assets/images/background.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -10,9 +11,8 @@ body {
 
 /* Hero background image with overlay */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1532187863486-abf9db5a90e3?q=80&w=2670&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
+    /* MODIFIED: Removed background image and replaced with a solid color */
+    background-color: #000;
     position: relative; /* Added for particle background positioning */
     overflow: hidden; /* Ensure particles don't overflow */
 }
@@ -104,3 +104,4 @@ body {
 main > section:not(#home) {
     background-color: rgba(0,0,0,0.6);
 }
+

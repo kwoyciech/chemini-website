@@ -1,7 +1,7 @@
 /* Custom styles based on the analysis report */
 body {
     font-family: 'Inter', sans-serif;
-    /* Sourcing locally from assets/images folder */
+    /* POPRAWKA: Zmieniono z powrotem na .png */
     background-image: url('../assets/images/background.png');
     background-size: cover;
     background-position: center;
@@ -11,7 +11,7 @@ body {
 
 /* Hero background image with overlay */
 .hero-section {
-    /* MODIFIED: Removed background image and replaced with a solid color */
+    /* Użyto jednolitego koloru tła zgodnie z przesłanym plikiem */
     background-color: #000;
     position: relative; /* Added for particle background positioning */
     overflow: hidden; /* Ensure particles don't overflow */

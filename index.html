@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ3ZV0YEBZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,58 +14,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chemini - Nanomaterial R&D Partner</title>
     
+    <!-- Favicon Links -->
     <link rel="icon" href="assets/images/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="antialiased">
 
+    <!-- Header Section -->
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
             <div>
                 <a href="#home" class="text-2xl font-bold">
                     <span id="logo-text-1">Chemini</span><span id="logo-text-2" class="text-chemini-yellow">.</span>
                 </a>
                 <div class="text-xs text-gray-400 uppercase tracking-widest -mt-1">THE CHEMICAL INITIATIVE</div>
             </div>
+            <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#technology" class="nav-link">Technology</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#partnership" class="nav-link">Partnership</a>
                 <a href="#process" class="nav-link">Process</a>
                 <a href="#knowledge" class="nav-link">Knowledge</a>
+                <!-- UPDATED LINK -->
                 <a href="about.html" class="nav-link">About</a>
                 <a href="#contact" class="bg-chemini-yellow text-black font-semibold px-4 py-2 rounded-md hover:bg-amber-400 transition-all duration-300 transform hover:scale-105">Start a Project</a>
             </div>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-lg">
             <a href="#technology" class="block py-2 px-4 text-sm hover:bg-gray-800">Technology</a>
             <a href="#products" class="block py-2 px-4 text-sm hover:bg-gray-800">Products</a>
             <a href="#partnership" class="block py-2 px-4 text-sm hover:bg-gray-800">Partnership</a>
             <a href="#process" class="block py-2 px-4 text-sm hover:bg-gray-800">Process</a>
             <a href="#knowledge" class="block py-2 px-4 text-sm hover:bg-gray-800">Knowledge</a>
+            <!-- UPDATED LINK -->
             <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-800">About</a>
             <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-800">Start a Project</a>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero-section h-screen flex items-center justify-center text-center">
-            <div id="tsparticles"></div> <div class="container mx-auto px-6 hero-content">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+            <div id="tsparticles"></div> <!-- Particle container -->
+            <div class="container mx-auto px-6 hero-content">
+                <!-- UPDATED: Mobile responsive font size -->
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-4">
                     Stop Adapting. <span class="text-chemini-yellow">Start Co-Creating.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -74,8 +89,10 @@
             </div>
         </section>
 
+        <!-- Technology Section -->
         <section id="technology" class="py-20">
             <div class="container mx-auto px-6">
+                <!-- Technology Hero -->
                 <div class="text-center py-16 rounded-lg mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold mb-4">Technology: <span class="text-chemini-yellow">Advanced Nanoparticle Dispersions</span></h2>
                     <p class="text-gray-300 max-w-3xl mx-auto mb-8">
@@ -84,6 +101,7 @@
                     <a href="#challenge" class="bg-chemini-yellow text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-amber-400 transition-colors duration-300">Learn More</a>
                 </div>
 
+                <!-- The Challenge -->
                 <div id="challenge" class="max-w-6xl mx-auto mb-16">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="text-left">
@@ -107,17 +125,20 @@
                             </ul>
                         </div>
                         <div class="relative">
-                            <img src="assets/images/aggregated-nanoparticles.png" alt="Aggregated Nanoparticles" class="rounded-lg shadow-2xl w-full h-80 object-cover">
+                            <!-- NOTE: This path is from your original file. -->
+                            <img src="assets/images/aggregated-nanoparticles.png" alt="Aggregated Nanoparticles" class="rounded-lg shadow-2xl w-full h-80 object-cover" onerror="this.src='https://placehold.co/600x320/1f2937/4b5563?text=Image+Missing'">
                         </div>
                     </div>
                 </div>
 
 
+                <!-- The Chemini Solution -->
                 <div class="text-center max-w-5xl mx-auto mb-20">
                     <h3 class="text-3xl font-bold mb-6">The Chemini Solution: <span class="text-chemini-yellow">Surface Functionalization</span></h3>
                     <p class="text-gray-400 mb-12 max-w-3xl mx-auto">Our breakthrough technology directly addresses these limitations through a proprietary nanoparticle surface functionalization process.</p>
                     
                     <div class="grid md:grid-cols-3 gap-8 text-left">
+                        <!-- Card 1: Customized Ligands -->
                         <div class="bg-gray-900/50 p-6 rounded-lg interactive-card">
                             <div class="flex items-center mb-4">
                                 <svg class="w-8 h-8 text-chemini-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20.59c-1.144-.39-2.208-1.036-3.099-1.884m12.198 0A9.953 9.953 0 0014 18.707M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
@@ -125,6 +146,7 @@
                             </div>
                             <p class="text-gray-400">We utilize specially designed ligands that chemically bond to the nanoparticle surface. This modification fundamentally changes the particle's interaction with its environment.</p>
                         </div>
+                        <!-- Card 2: Superior Stability -->
                         <div class="bg-gray-900/50 p-6 rounded-lg interactive-card">
                            <div class="flex items-center mb-4">
                                 <svg class="w-8 h-8 text-chemini-yellow mr-4"  fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -132,6 +154,7 @@
                             </div>
                             <p class="text-gray-400">This process delivers highly stable nanoparticle dispersions across a broad range of solvents, from polar to non-polar, effectively overcoming the limitations of conventional systems.</p>
                         </div>
+                        <!-- Card 3: Enhanced Integration -->
                         <div class="bg-gray-900/50 p-6 rounded-lg interactive-card">
                             <div class="flex items-center mb-4">
                                 <svg class="w-8 h-8 text-chemini-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path></svg>
@@ -142,6 +165,7 @@
                     </div>
                 </div>
 
+                <!-- Applications and Impact -->
                 <div class="text-center max-w-5xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Applications and Impact</h2>
                     <div class="bg-gray-900/50 border border-gray-800 rounded-lg p-8 grid md:grid-cols-2 gap-8 items-center">
@@ -171,6 +195,7 @@
                     </div>
                 </div>
 
+                <!-- Ready to Transform Your Research? -->
                 <div class="text-center mt-20 pt-12 border-t border-gray-800">
                     <h3 class="text-3xl font-bold mb-4">Ready to Transform Your Research?</h3>
                     <p class="text-gray-400 max-w-2xl mx-auto mb-8">Discover how Chemini's advanced nanoparticle dispersions can revolutionize your optoelectronic device development.</p>
@@ -190,14 +215,18 @@
             </div>
         </section>
 
+        <!-- Products Section -->
         <section id="products" class="py-20 bg-gray-900/80">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Interactive Product Dashboard</h2>
-                <div class="flex justify-center mb-8 border-b border-gray-700">
+                <!-- Tabs -->
+                <!-- UPDATED: Mobile responsive flex direction -->
+                <div class="flex flex-col sm:flex-row justify-center mb-8 border-b-0 sm:border-b border-gray-700">
                     <button id="sunano-tab" class="product-tab px-6 py-3 font-semibold border-b-2 border-chemini-yellow text-chemini-yellow">SuNano Series</button>
                     <button id="ninano-tab" class="product-tab px-6 py-3 font-semibold text-gray-400 border-b-2 border-transparent hover:text-white">NiNano Series</button>
                     <button id="ceranox-tab" class="product-tab px-6 py-3 font-semibold text-gray-400 border-b-2 border-transparent hover:text-white">Ceranox Series</button>
                 </div>
+                <!-- Content: Chart and Table -->
                 <div class="grid lg:grid-cols-5 gap-8 items-start">
                     <div class="lg:col-span-3 bg-black p-6 rounded-lg border border-gray-800">
                         <h3 class="font-bold mb-4 text-lg">Comparative Particle Size (nm)</h3>
@@ -206,7 +235,8 @@
                         </div>
                     </div>
                     <div class="lg:col-span-2">
-                         <div id="sunano-table" class="product-table-content">
+                         <!-- SuNano Table -->
+                        <div id="sunano-table" class="product-table-content">
                              <h3 class="font-bold mb-4 text-lg">Technical Specifications: SuNano Series (SnO<sub>2</sub> dispersions)</h3>
                              <div class="overflow-x-auto">
                                 <table class="w-full text-sm text-left text-gray-300">
@@ -265,6 +295,7 @@
                                 </table>
                              </div>
                         </div>
+                        <!-- NiNano Table -->
                         <div id="ninano-table" class="product-table-content hidden">
                              <h3 class="font-bold mb-4 text-lg">Technical Specifications: NiNano Series (NiO dispersions)</h3>
                              <div class="overflow-x-auto">
@@ -294,6 +325,7 @@
                                 </table>
                             </div>
                         </div>
+                        <!-- Ceranox Table -->
                         <div id="ceranox-table" class="product-table-content hidden">
                              <h3 class="font-bold mb-4 text-lg">Technical Specifications: Ceranox Series</h3>
                              <div class="overflow-x-auto">
@@ -334,21 +366,25 @@
             </div>
         </section>
 
+        <!-- Partnership Section -->
         <section id="partnership" class="py-20 bg-black/80">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">A Partnership Built for Discovery</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto mb-12">We built our service on three pillars to address the core challenges researchers face.</p>
                 <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Pillar 1: Repeatability -->
                     <div class="p-8 rounded-lg bg-gray-900/50 interactive-card">
                         <div class="text-4xl text-chemini-yellow mb-4">✓</div>
                         <h3 class="text-xl font-bold mb-2">Absolute Repeatability</h3>
                         <p class="text-gray-400">Eliminate inconsistent batch results. With strict process control, we guarantee your material performs the same way every time.</p>
                     </div>
+                    <!-- Pillar 2: Customization -->
                     <div class="p-8 rounded-lg bg-gray-900/50 interactive-card">
                         <div class="text-4xl text-chemini-yellow mb-4">⚙️</div>
                         <h3 class="text-xl font-bold mb-2">Radical Customization</h3>
                         <p class="text-gray-400">Go beyond off-the-shelf limitations. We tailor particle size, composition, and dispersion chemistry to your exact specifications.</p>
                     </div>
+                    <!-- Pillar 3: Expert Support -->
                     <div class="p-8 rounded-lg bg-gray-900/50 interactive-card">
                         <div class="text-4xl text-chemini-yellow mb-4">🤝</div>
                         <h3 class="text-xl font-bold mb-2">True Scientific Partnership</h3>
@@ -358,11 +394,13 @@
             </div>
         </section>
 
+        <!-- Process Section -->
         <section id="process" class="py-20 bg-black/80">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">From Challenge to Solution</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto text-center mb-16">Our transparent, three-step process is designed for collaboration and rapid results.</p>
                 <div class="relative grid md:grid-cols-3 gap-x-12 gap-y-16 process-grid">
+                    <!-- Step 1 -->
                     <div class="relative z-10 text-center md:text-left bg-transparent px-2">
                         <div class="flex items-center justify-center md:justify-start mb-4">
                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 text-chemini-yellow font-bold text-xl border-2 border-gray-700">1</div>
@@ -370,14 +408,16 @@
                         </div>
                         <p class="text-gray-400">We start by deeply understanding your technical challenge, performance targets, and application constraints.</p>
                     </div>
-                     <div class="relative z-10 text-center md:text-left bg-transparent px-2">
+                     <!-- Step 2 -->
+                    <div class="relative z-10 text-center md:text-left bg-transparent px-2">
                         <div class="flex items-center justify-center md:justify-start mb-4">
                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 text-chemini-yellow font-bold text-xl border-2 border-gray-700">2</div>
                             <h3 class="text-xl font-bold ml-4">Co-Development</h3>
                         </div>
                         <p class="text-gray-400">Our scientists develop and iterate material formulations, providing samples for your validation at each milestone.</p>
                     </div>
-                     <div class="relative z-10 text-center md:text-left bg-transparent px-2">
+                     <!-- Step 3 -->
+                    <div class="relative z-10 text-center md:text-left bg-transparent px-2">
                          <div class="flex items-center justify-center md:justify-start mb-4">
                             <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 text-chemini-yellow font-bold text-xl border-2 border-gray-700">3</div>
                             <h3 class="text-xl font-bold ml-4">Scale & Optimize</h3>
@@ -388,10 +428,12 @@
             </div>
         </section>
 
+        <!-- Knowledge Hub Section -->
         <section id="knowledge" class="py-20 bg-gray-900/80">
             <div class="container mx-auto px-6">
                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Knowledge Hub</h2>
                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
                     <div class="bg-black/50 rounded-lg overflow-hidden group interactive-card">
                         <div class="p-6">
                             <p class="text-sm text-chemini-yellow mb-1">Application Note</p>
@@ -400,6 +442,7 @@
                             <a href="#" class="text-chemini-yellow text-sm font-semibold mt-4 inline-block">Read More &rarr;</a>
                         </div>
                     </div>
+                    <!-- Card 2 -->
                     <div class="bg-black/50 rounded-lg overflow-hidden group interactive-card">
                         <div class="p-6">
                             <p class="text-sm text-chemini-yellow mb-1">Research Paper</p>
@@ -408,6 +451,7 @@
                             <a href="#" class="text-chemini-yellow text-sm font-semibold mt-4 inline-block">Read More &rarr;</a>
                         </div>
                     </div>
+                    <!-- Card 3 -->
                     <div class="bg-black/50 rounded-lg overflow-hidden group interactive-card">
                         <div class="p-6">
                             <p class="text-sm text-chemini-yellow mb-1">Case Study</p>
@@ -420,6 +464,7 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-black/80">
             <div class="container mx-auto px-6">
                 <div class="max-w-3xl mx-auto text-center">
@@ -449,6 +494,7 @@
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="bg-gray-900 py-8">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <p>&copy; 2025 Chemini. All rights reserved.</p>
@@ -459,10 +505,12 @@
         </div>
     </footer>
     
+    <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
     
+    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -51,22 +51,15 @@ body {
     position: relative;
 }
 
-/* MOBILE FIX 1:
-   Wrapped this rule in a media query. 
-   The line will ONLY appear on screens 768px and wider (desktop).
-   This will NOT affect the desktop version.
-*/
-@media (min-width: 768px) {
-    .process-grid::before {
-        content: '';
-        position: absolute;
-        top: 1.5rem; /* Vertically center with the 3rem height circle */
-        left: 1.5rem; /* Start from the center of the first circle */
-        right: 1.5rem; /* End at the center of the last circle */
-        height: 2px;
-        background-color: #4B5563; /* Gray-600 */
-        z-index: 0;
-    }
+.process-grid::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem; /* Vertically center with the 3rem height circle */
+    left: 1.5rem; /* Start from the center of the first circle */
+    right: 1.5rem; /* End at the center of the last circle */
+    height: 2px;
+    background-color: #4B5563; /* Gray-600 */
+    z-index: 0;
 }
 
 /* Navigation link hover effect */
@@ -97,25 +90,18 @@ body {
 
 /* Interactive card hover effect */
 .interactive-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    border: 1px solid #374151; /* Gray-700 border */
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border-width: 1px;
+    border-color: #374151; /* Gray-700 */
 }
 
 .interactive-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
     border-color: var(--chemini-yellow);
 }
 
-/* MOBILE FIX 2 (NEW):
-   Disables the 'background-attachment: fixed' property on mobile.
-   This prevents the laggy/stretchy/zoomed background effect on mobile 
-   browsers and makes it scroll normally.
-   This will NOT affect the desktop version.
-*/
-@media (max-width: 767px) {
-    body {
-        background-attachment: scroll;
-    }
+/* Add a subtle overlay to sections to improve text readability over the new background */
+main > section:not(#home) {
+    background-color: rgba(0,0,0,0.6);
 }
 

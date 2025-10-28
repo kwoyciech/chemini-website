@@ -1,7 +1,7 @@
 /* Custom styles based on the analysis report */
 body {
     font-family: 'Inter', sans-serif;
-    /* REVERTED: Restored your original background image */
+    /* POPRAWKA: Zmieniono z powrotem na .png */
     background-image: url('../assets/images/background.png');
     background-size: cover;
     background-position: center;
@@ -51,18 +51,15 @@ body {
     position: relative;
 }
 
-/* UPDATED: Wrapped in media query to hide on mobile */
-@media (min-width: 768px) {
-    .process-grid::before {
-        content: '';
-        position: absolute;
-        top: 1.5rem; /* Vertically center with the 3rem height circle */
-        left: 1.5rem; /* Start from the center of the first circle */
-        right: 1.5rem; /* End at the center of the last circle */
-        height: 2px;
-        background-color: #4B5563; /* Gray-600 */
-        z-index: 0;
-    }
+.process-grid::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem; /* Vertically center with the 3rem height circle */
+    left: 1.5rem; /* Start from the center of the first circle */
+    right: 1.5rem; /* End at the center of the last circle */
+    height: 2px;
+    background-color: #4B5563; /* Gray-600 */
+    z-index: 0;
 }
 
 /* Navigation link hover effect */
@@ -93,20 +90,18 @@ body {
 
 /* Interactive card hover effect */
 .interactive-card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    border: 1px solid #374151; /* Gray-700 border */
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border-width: 1px;
+    border-color: #374151; /* Gray-700 */
 }
 
 .interactive-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
     border-color: var(--chemini-yellow);
 }
 
-/* NEW: Hide particle animation on mobile for performance */
-@media (max-width: 767px) {
-    #tsparticles {
-        display: none;
-    }
+/* Add a subtle overlay to sections to improve text readability over the new background */
+main > section:not(#home) {
+    background-color: rgba(0,0,0,0.6);
 }
 

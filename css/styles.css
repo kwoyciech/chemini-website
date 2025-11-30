@@ -51,15 +51,17 @@ body {
     position: relative;
 }
 
-.process-grid::before {
-    content: '';
-    position: absolute;
-    top: 1.5rem; /* Vertically center with the 3rem height circle */
-    left: 1.5rem; /* Start from the center of the first circle */
-    right: 1.5rem; /* End at the center of the last circle */
-    height: 2px;
-    background-color: #4B5563; /* Gray-600 */
-    z-index: 0;
+@media (min-width: 768px) {
+    .process-grid::before {
+        content: '';
+        position: absolute;
+        top: 1.5rem; /* Vertically center with the 3rem height circle */
+        left: 1.5rem; /* Start from the center of the first circle */
+        right: 1.5rem; /* End at the center of the last circle */
+        height: 2px;
+        background-color: #4B5563; /* Gray-600 */
+        z-index: 0;
+    }
 }
 
 /* Navigation link hover effect */

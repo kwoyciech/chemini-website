@@ -185,6 +185,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (error) {
                 throw error;
             }
+
+            // Construct mailto link
+            const subject = encodeURIComponent(`New Challenge from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nChallenge:\n${challenge}`);
+            window.location.href = `mailto:office@chemini.pl?subject=${subject}&body=${body}`;
             
             submitButton.textContent = 'Submitted!';
             submitButton.style.backgroundColor = '#22C55E'; // Green

@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl0dW5kbWFtc3Jnd3ViYm5ocnBuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NzAxNzgsImV4cCI6MjA3NDE0NjE3OH0.bly1gna66OiKsq8uXvnmRFBmrhMgq0qFaOv5ROJdp3Q';
     const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
+    // Initialize EmailJS
+    emailjs.init("iUEbiNqgvbfA4qQz1");
+
     // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     contactForm.addEventListener('submit', async function(event) {
@@ -191,20 +194,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 ]);
 
             if (error) {
+                console.error('Supabase Error:', error);
                 throw error;
             }
 
-            // Construct mailto link
-            const subject = encodeURIComponent(`New Challenge from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nChallenge:\n${challenge}`);
-            window.location.href = `mailto:office@chemini.pl?subject=${subject}&body=${body}`;
+            // Send email using EmailJS
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                reply_to: email,
+                message: challenge,
+                challenge: challenge // providing both keys to be safe
+            };
+
+            await emailjs.send('service_5n2avap', 'template_qe02mr2', templateParams);
             
             submitButton.textContent = 'Submitted!';
             submitButton.style.backgroundColor = '#22C55E'; // Green
             contactForm.reset();
 
         } catch (error) {
-            console.error('Error submitting to Supabase:', error.message);
+            console.error('Error submitting form:', error);
             submitButton.textContent = 'Failed. Try Again.';
             submitButton.style.backgroundColor = '#EF4444'; // Red
         } finally {

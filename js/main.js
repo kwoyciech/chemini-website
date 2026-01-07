@@ -176,10 +176,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const challenge = document.getElementById('challengeInput').value;
 
         try {
+            // NOTE: The database table 'challenges' has a unique constraint on the 'name' column (Primary Key).
+            // Additionally, RLS policies prevent 'upsert' (UPDATE) operations for anonymous users.
+            // To allow multiple submissions from the same user without changing the DB schema (which we cannot do),
+            // we must make the 'name' unique for each insertion.
+            // We append the current timestamp (ISO string for millisecond precision) to the name for the database entry.
+            // The email notification will still use the original name entered by the user.
+            const dbName = `${name} (${new Date().toISOString()})`;
+
             const { data, error } = await supabaseClient
                 .from('challenges') // Assumes a table named 'challenges'
                 .insert([
-                    { name: name, email: email, challenge: challenge },
+                    { name: dbName, email: email, challenge: challenge },
                 ]);
 
             if (error) {

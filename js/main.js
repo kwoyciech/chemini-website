@@ -200,11 +200,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send email using EmailJS
             const templateParams = {
+                // Common variations for name
                 from_name: name,
+                user_name: name,
+                name: name,
+
+                // Common variations for email
                 from_email: email,
+                user_email: email,
+                email: email,
                 reply_to: email,
+
+                // Message content
                 message: challenge,
-                challenge: challenge // providing both keys to be safe
+                challenge: challenge,
+                notes: challenge
             };
 
             await emailjs.send('service_5n2avap', 'template_qe02mr2', templateParams);

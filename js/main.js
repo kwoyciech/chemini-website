@@ -201,9 +201,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Send email using EmailJS
             const templateParams = {
                 from_name: name,
+                name: name, // Redundant key for template compatibility
+                user_name: name, // Redundant key for template compatibility
                 from_email: email,
+                email: email, // Redundant key for template compatibility
+                user_email: email, // Redundant key for template compatibility
                 reply_to: email,
                 message: challenge,
+                notes: challenge, // Redundant key for template compatibility
                 challenge: challenge // providing both keys to be safe
             };
 

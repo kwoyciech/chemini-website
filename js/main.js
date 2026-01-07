@@ -200,16 +200,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send email using EmailJS
             const templateParams = {
+                // Common variations for name
                 from_name: name,
-                name: name, // Redundant key for template compatibility
-                user_name: name, // Redundant key for template compatibility
+                user_name: name,
+                name: name,
+
+                // Common variations for email
                 from_email: email,
-                email: email, // Redundant key for template compatibility
-                user_email: email, // Redundant key for template compatibility
+                user_email: email,
+                email: email,
                 reply_to: email,
+
+                // Message content
                 message: challenge,
-                notes: challenge, // Redundant key for template compatibility
-                challenge: challenge // providing both keys to be safe
+                challenge: challenge,
+                notes: challenge
             };
 
             await emailjs.send('service_5n2avap', 'template_qe02mr2', templateParams);

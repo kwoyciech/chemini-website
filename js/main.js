@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const challenge = document.getElementById('challenge').value;
+        const challenge = document.getElementById('challengeInput').value;
 
         try {
             const { data, error } = await supabaseClient
